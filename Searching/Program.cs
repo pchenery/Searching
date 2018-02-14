@@ -14,20 +14,10 @@ namespace Searching
         static Random rnd = new Random();
         static Stopwatch swLinear = new Stopwatch();
         static Stopwatch swBinary = new Stopwatch();
-        static List<string> word = new List<string>();
 
         static void Main(string[] args)
         {
             words = System.IO.File.ReadAllLines(@"C:\Work\Training\Searching\words.txt");
-
-            //using (StreamReader sr = new StreamReader(@"C:\Work\Training\Searching\words.txt"))
-            //{
-            //    string line;
-            //    while ((line = sr.ReadLine()) != null)
-            //    {
-            //        word.Add(line);
-            //    }
-            //}
 
             swLinear.Start();
             for (int i = 0; i < 10000; i++)
@@ -57,11 +47,6 @@ namespace Searching
         {
             return words[rnd.Next(1, words.Length)];
         }
-
-        //static void LinearArraySearch(string WordToFind)
-        //{
-        //    word.First(w => w.ToString() == WordToFind);
-        //}
 
         static void LinearSearch(string wordToFind)
         {
