@@ -19,6 +19,8 @@ namespace Searching
         {
             words = System.IO.File.ReadAllLines(@"C:\Work\Training\Searching\words.txt");
 
+            Array.Sort(words, (a, b) => String.Compare(a, b, true));
+
             swLinear.Start();
             for (int i = 0; i < 10000; i++)
             {
