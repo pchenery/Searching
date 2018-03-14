@@ -72,7 +72,7 @@ namespace Searching
                 {
                     found = true;
                 }
-                else if (string.Compare(wordToFind, words[mid], true) < 0)
+                else if (string.Compare(wordToFind, words[mid], false) < 0)
                 {
                     return BinarySearch(wordToFind, min, mid - 1);
                 }
